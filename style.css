@@ -1,19 +1,27 @@
+:root{
+    --background:#A69DA6;
+
+}
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
     background-image: url("background.jpg");
+    background-size: cover;
 }
 p {
     font-size: 1.25em;
 }
 div#card{
+    
+    margin: auto;
     width: fit-content;
-    border-radius: 10%;
-    background-color: aqua;
+    border-radius: 25px;
+    padding: 10px;
+    opacity: 75%;
+    background-color: var(--background);
     text-align: center;
     position: relative;
     top: 50%;
-    transform: translate(0%, 10%);
 }
 
