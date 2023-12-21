@@ -10,7 +10,7 @@ body{
 }
 p {
     font-size: 1em;
-    line-height: 0;
+    
 }
 
 #card{
@@ -28,17 +28,16 @@ p {
     top: 50%;
 }
 #textBody{
+    height: auto;
     margin: auto;
     width: 75%;
+    white-space: initial;
     overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
     border-radius: 25px;
     padding: 10px;
     opacity: 70%;
     background-color: var(--background);
     text-align: center;
-    position: relative;
     transform: translateY(10px);
 }
 #extra{
