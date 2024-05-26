@@ -1,19 +1,21 @@
-:root{
-    --background:#A69DA6;
+:root {
+    --background: #A69DA6;
 
 }
-body{
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 p {
     font-size: 1em;
-    
+
 }
 
-#card{
+#card {
     margin: auto;
     width: 75%;
     overflow-wrap: break-word;
@@ -27,7 +29,17 @@ p {
     position: relative;
     top: 50%;
 }
-#textBody{
+
+#footer {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, 70%);
+    margin: 0 auto;
+}
+
+
+#textBody {
     height: auto;
     margin: auto;
     width: 75%;
@@ -40,50 +52,38 @@ p {
     text-align: center;
     transform: translateY(10px);
 }
-#extra{
+
+#extra {
     opacity: 0;
-}
-#card:hover{
-    animation: jiggle 400ms;
-}
-#card:hover > #extra {
-        animation: addText 200ms ease-in;
-        opacity: 100;
-    }
-#card:hover::after > #extra {
-    animation: removeText 200ms ease-in;
-    opacity: 0;
+    transition: opacity 400ms ease-in-out;
 }
 
-@keyframes removeText {
-    from {
-        opacity: 100;
-    }
-    to {
-        opacity: 0;
-    }
+#card:hover {
+    animation: jiggle 400ms;
+}
+
+#card:hover>#extra {
+    opacity: 100;
+}
+
+#card:hover::after>#extra {
+    opacity: 0;
 }
 
 @keyframes jiggle {
-    from,to{
+
+    from,
+    to {
         transform: rotate(0);
     }
-    25%
-    {
-        transform: rotate(2deg);
-    }
-    75%{
-        transform: rotate(-2deg);
-    }
-    
 
-}
+    25% {
+        transform: rotate(.7deg);
+    }
 
-@keyframes addText {
-    from {
-        opacity: 0;
+    75% {
+        transform: rotate(-.7deg);
     }
-    to{
-        opacity: 100;
-    }
+
+
 }
