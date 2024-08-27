@@ -8,12 +8,24 @@ body {
     background-size: cover;
     background-color:#181a24;
     background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
 }
 
 p {
     font-size: 1em;
 
 }
+
+
+#sketch {
+    width: 150%;
+    height: 150%;
+    transform: translate(-10%,-10%);
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+  }
 
 #card {
     margin: auto;
@@ -23,7 +35,6 @@ p {
     word-break: break-all;
     border-radius: 25px;
     padding: 10px;
-    opacity: 70%;
     background-color: var(--background);
     text-align: center;
     position: relative;
@@ -33,7 +44,6 @@ p {
 #contactIcons {
     background-color: var(--background);
     border-radius: 5px;
-    opacity: 70;
     position: fixed;
     left: 50%;
     padding: 3px;
@@ -51,7 +61,6 @@ p {
     overflow-wrap: break-word;
     border-radius: 25px;
     padding: 10px;
-    opacity: 70%;
     background-color: var(--background);
     text-align: center;
     transform: translateY(10px);
