@@ -1,15 +1,16 @@
 :root {
     --background: #A69DA6;
-
+    height: 100%;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-size: cover;
-    background-color:#181a24;
+    background-color: beige;
     background-repeat: no-repeat;
     height: 100%;
     overflow: hidden;
+    margin: 0;
 }
 
 p {
@@ -21,24 +22,17 @@ p {
 #sketch {
     width: 150%;
     height: 150%;
-    transform: translate(-10%,-10%);
+    transform: translate(-10%, -10%);
     position: absolute;
     display: block;
     margin: 0 auto;
-  }
+}
 
-#card {
-    margin: auto;
-    width: 75%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
-    border-radius: 25px;
-    padding: 10px;
-    background-color: var(--background);
-    text-align: center;
-    position: relative;
-    top: 50%;
+#name {
+    width: 100%;
+    margin: 0px;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #contactIcons {
@@ -55,15 +49,15 @@ p {
 
 #textBody {
     height: auto;
+    position: fixed;
+    bottom: 0;
     margin: auto;
-    width: 75%;
+    width: 100%;
     white-space: initial;
     overflow-wrap: break-word;
-    border-radius: 25px;
     padding: 10px;
     background-color: var(--background);
     text-align: center;
-    transform: translateY(10px);
 }
 
 #extra {
