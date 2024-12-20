@@ -1,10 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
     animateHeader();
+    animateTabs();
 });
+
+function animateTabs() {
+    const allTabs = document.querySelectorAll(".tab");
+    let index = 0;
+    const interval = setInterval(function () {
+        if (index < allTabs.length) {
+            const tab = allTabs.item(index);
+            tab.classList.remove("initial");
+            index++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 400);
+}
 
 function animateHeader() {
     const element = document.querySelector("#name");
-    const iterationsBeforeFinish = 2;
+    const iterationsBeforeFinish = 4;
     let target = "Joshua Beighton";
     let elapsed = 0;
     const interval = setInterval(function () {
@@ -19,7 +34,7 @@ function animateHeader() {
                 element.innerHTML += getRandomChar();
             }
         }
-    }, 40);
+    }, 10);
 }
 
 function replaceLastChar(element) {

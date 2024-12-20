@@ -14,8 +14,25 @@ body {
 }
 
 p {
-    font-size: 1em;
+    margin: 2px;
+}
 
+h3 {
+    margin: 2px;
+}
+
+.tab{
+    background-color: lightblue;
+    width: 90%;
+    margin: 20px 0px ;
+    border-radius: 0px 10px 10px 0px;
+    transition: all 800ms ease-in-out;
+    padding: 5px;
+}
+
+.initial{
+    opacity: 0;
+    transform: translate(-100px,10px);
 }
 
 
