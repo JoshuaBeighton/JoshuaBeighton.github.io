@@ -5,34 +5,23 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-size: cover;
-    background-color: beige;
-    background-repeat: no-repeat;
+    background-color: rgb(0,30,70);
     height: 100%;
-    overflow: hidden;
     margin: 0;
+    color: white;
 }
 
 p {
     margin: 2px;
 }
 
+p::selection {
+    background-color: rgb(255, 216, 41);
+    color: blue;
+}
+
 h3 {
     margin: 2px;
-}
-
-.tab{
-    background-color: lightblue;
-    width: 90%;
-    margin: 20px 0px ;
-    border-radius: 0px 10px 10px 0px;
-    transition: all 800ms ease-in-out;
-    padding: 5px;
-}
-
-.initial{
-    opacity: 0;
-    transform: translate(-100px,10px);
 }
 
 
@@ -46,11 +35,43 @@ h3 {
 }
 
 #name {
-    width: 100%;
-    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
     padding: 2px;
-    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2pt;
 }
+
+#profile {
+    position: relative;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+#pfp-container {
+    position: absolute;
+    height: 100%;
+    right: 50%;
+    margin-right: 10px;
+}
+
+#pfp {
+    max-height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+#vbar {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    right: 50%;
+}
+
 
 #contactIcons {
     background-color: var(--background);
@@ -77,37 +98,32 @@ h3 {
     text-align: center;
 }
 
-#extra {
+#profilePara1{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0%;
+    margin-left: 10px;
+    width: 340px;
+    text-align: justify;
+}
+
+#profilePara1>h3{
+    margin-top: -6px;
+    text-decoration: underline;
+}
+
+.unhidden{
+    opacity: 100%;
+    transition: opacity 400ms ease-in-out;
+}
+
+.hidden{
     opacity: 0;
     transition: opacity 400ms ease-in-out;
 }
 
-#card:hover {
-    animation: jiggle 400ms;
-}
-
-#card:hover>#extra {
-    opacity: 100;
-}
-
-#card:hover::after>#extra {
+#extra {
     opacity: 0;
-}
-
-@keyframes jiggle {
-
-    from,
-    to {
-        transform: rotate(0);
-    }
-
-    25% {
-        transform: rotate(.7deg);
-    }
-
-    75% {
-        transform: rotate(-.7deg);
-    }
-
-
+    transition: opacity 400ms ease-in-out;
 }

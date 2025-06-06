@@ -3,13 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     animateTabs();
 });
 
+const elementUnhideOrder = ["#pfp","#vbar","#profilePara1"];
+
 function animateTabs() {
     const allTabs = document.querySelectorAll(".tab");
     let index = 0;
     const interval = setInterval(function () {
-        if (index < allTabs.length) {
-            const tab = allTabs.item(index);
-            tab.classList.remove("initial");
+        if (index < elementUnhideOrder.length) {
+            document.querySelector(elementUnhideOrder[index]).classList.remove("hidden");
+            document.querySelector(elementUnhideOrder[index]).classList.add("unhidden");
             index++;
         } else {
             clearInterval(interval);
@@ -17,13 +19,15 @@ function animateTabs() {
     }, 400);
 }
 
+const iterationsBeforeFinish = 3;
+const delay = 8;
+
 function animateHeader() {
-    const element = document.querySelector("#name");
-    const iterationsBeforeFinish = 4;
+    const element = document.querySelector("#name").children[0];
+    
     let target = "Joshua Beighton";
     let elapsed = 0;
     const interval = setInterval(function () {
-        replaceLastChar(element);
         elapsed++;
         if (elapsed >= iterationsBeforeFinish) {
             setLastChar(element, target.charAt(element.innerHTML.length - 1));
@@ -34,7 +38,10 @@ function animateHeader() {
                 element.innerHTML += getRandomChar();
             }
         }
-    }, 10);
+        else{
+            setLastChar(element, getRandomChar());
+        }
+    }, delay);
 }
 
 function replaceLastChar(element) {
