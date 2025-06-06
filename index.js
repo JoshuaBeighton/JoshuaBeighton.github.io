@@ -3,20 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
     animateTabs();
 });
 
-const elementUnhideOrder = ["#pfp","#vbar","#profilePara1"];
+const elementUnhideOrder = ["#pfp,#vbar","#profilePara1", "#profilePara2"];
 
 function animateTabs() {
     const allTabs = document.querySelectorAll(".tab");
     let index = 0;
     const interval = setInterval(function () {
         if (index < elementUnhideOrder.length) {
-            document.querySelector(elementUnhideOrder[index]).classList.remove("hidden");
-            document.querySelector(elementUnhideOrder[index]).classList.add("unhidden");
+            elementUnhideOrder[index].split(",").forEach(unhideElement);
             index++;
         } else {
             clearInterval(interval);
         }
     }, 400);
+}
+
+function unhideElement(elem){
+    document.querySelector(elem).classList.remove("hidden");
+    document.querySelector(elem).classList.add("unhidden");
 }
 
 const iterationsBeforeFinish = 3;
