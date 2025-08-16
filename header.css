@@ -1,0 +1,21 @@
+#header {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    color: white;
+}
+
+#header-right > a {
+    margin: 5px;
+    color: white;
+}
+
+#header-left > p {
+    margin: 5px;
+    color: white;
+}
