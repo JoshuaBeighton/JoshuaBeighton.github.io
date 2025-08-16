@@ -45,10 +45,9 @@ h3::selection {
     margin: 0 auto;
 }
 
-#name {
+h1 {
     display: flex;
     justify-content: center;
-    font-size: 1.5em;
     padding: 2px;
     color: white;
     text-decoration: underline;
