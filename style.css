@@ -35,6 +35,10 @@ h3::selection {
     color: blue;
 }
 
+a{
+    color: rgb(255, 216, 41);
+}
+
 
 #sketch {
     width: 150%;
