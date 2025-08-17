@@ -23,7 +23,8 @@ hr {
 
 p::selection,
 h3::selection,
-h4::selection {
+h4::selection,
+li::selection {
     background-color: rgb(255, 216, 41);
     color: blue;
 }

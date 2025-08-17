@@ -7,7 +7,7 @@
 
 .event{
     margin: 5px;
-    width: 60%;
+    width: 85%;
     display: flex;
     flex: 1 1 0;
     justify-content: center;
@@ -16,7 +16,7 @@
 }
 
 .event-hr{
-    width: 60%;
+    width: 85%;
     margin: 5px;
 }
 
