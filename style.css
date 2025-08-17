@@ -14,106 +14,44 @@ body {
 }
 
 p {
-    margin: 2px;
+    margin: 0.3rem 0;
 }
 
 hr {
-    margin: 0px 0px 1px 0px;
+    margin: 0.5rem 0;
 }
 
-p::selection {
+p::selection,
+h3::selection,
+h4::selection {
     background-color: rgb(255, 216, 41);
     color: blue;
 }
 
-h3 {
-    margin: 2px;
+h3, h4 {
+    margin: 0.3rem 0;
 }
 
-h3::selection {
-    background-color: rgb(255, 216, 41);
-    color: blue;
-}
-
-a{
+a {
     color: rgb(255, 216, 41);
 }
 
-
 #sketch {
-    width: 150%;
-    height: 150%;
-    transform: translate(-10%, -10%);
-    position: absolute;
+    width: 100%;
+    height: auto;
+    position: relative;
     display: block;
     margin: 0 auto;
+    transform: none;
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    padding: 2px;
+    padding: 0.5rem;
     color: white;
     text-decoration: underline;
     text-decoration-thickness: 2pt;
-}
-
-#profile {
-    flex: 1 0 auto;
-    position: relative;
-    height: 520px;
-    margin-bottom: 50px;
-}
-
-#pfp-container {
-    position: absolute;
-    height: 100%;
-    right: 50%;
-    margin-right: 10px;
-}
-
-#pfp {
-    max-height: 100%;
-    border-radius: 4px;
-    object-fit: cover;
-}
-
-#vbar {
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    background-color: white;
-    right: 50%;
-}
-
-
-#contactIcons {
-    background-color: var(--background);
-    border-radius: 5px;
-    padding: 3px;
-    bottom: 0px;
-    margin: 0px auto 0px auto;
-}
-
-#profilePara1{
-    top: 0%;
-}
-
-#profilePara2{
-    bottom: 0%;
-    text-align: justify;
-}
-
-.rightProfile {
-    left: 50%;
-    position: absolute;
-    margin-left: 10px;
-    width: 390px;
-    text-align: justify;
-}
-
-.rightProfile>h3{
-    margin-top: -6px;
 }
 
 .unhidden{
@@ -126,12 +64,81 @@ h1 {
     transition: opacity 400ms ease-in-out;
 }
 
-#extra {
-    opacity: 0;
-    transition: opacity 400ms ease-in-out;
+#contactIcons {
+    background-color: var(--background);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#contactIcons>a {
-    flex: 0 0 auto;
+#contactIcons > a {
     text-decoration: none;
+}
+
+#contactIcons {
+    background-color: var(--background);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#contactIcons > a {
+    text-decoration: none;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0 auto 2rem auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+#pfp-container {
+    flex: 1;                   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#pfp {
+    width: 100%;
+    max-width: 300px;          
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.rightProfile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    #profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #vbar {
+        display: none;
+    }
+
+    #pfp-container,
+    .rightProfile {
+        width: 100%;
+        max-width: 500px;
+    }
 }

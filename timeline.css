@@ -12,6 +12,7 @@
     flex: 1 1 0;
     justify-content: center;
     align-items: center;
+    text-align: justify;
 }
 
 .event-hr{
@@ -29,4 +30,9 @@
 .event-right{
     margin: 5px;
     flex: 1;
+}
+
+.event-left>h3,
+.event-left>h4{
+    text-align: right;
 }

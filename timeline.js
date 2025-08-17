@@ -14,5 +14,5 @@ function animateTimeline() {
         else {
             clearInterval(interval);
         }
-    }, 400);
+    }, 300);
 }
